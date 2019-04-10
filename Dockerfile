@@ -13,7 +13,8 @@ RUN echo "===> Install Python3 ..."  && \
     \
     \
     echo "===> Base install ..." && \
-    apk --update add sudo bash git openssl ca-certificates libffi-dev openssl-dev build-base py3-cffi && \
+    apk --update add sudo bash git openssl ca-certificates py3-cffi && \
+    apk --update add --virtual build-dependencies libffi-dev openssl-dev build-base&& \
     \
     \
     echo "===> Install Ansible ..." && \
